@@ -8,11 +8,7 @@ import reactor.core.publisher.Mono;
  * Demonstrates inheritance and code reuse principles.
  */
 public abstract class BaseService {
-    
-    /**
-     * Common error handling method for WebClient exceptions.
-     * Can be used by all services that make external API calls.
-     */
+
     protected <T> Mono<T> handleWebClientError(WebClientResponseException error, T defaultValue) {
         // Log the error for debugging
         System.err.println("WebClient error: " + error.getMessage());

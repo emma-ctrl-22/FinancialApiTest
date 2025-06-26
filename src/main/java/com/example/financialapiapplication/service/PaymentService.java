@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
  * Follows Single Responsibility Principle - only handles payment operations.
  */
 @Service
-public class PaymentService extends BaseService {
+public class  PaymentService extends BaseService {
     
     private final WebClient webClient;
     
