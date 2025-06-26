@@ -1,10 +1,9 @@
 package com.example.financialapiapplication.service;
 
-import com.example.financialapiapplication.dto.DataListPaymentResponse;
 import com.example.financialapiapplication.dto.Payment;
 import com.example.financialapiapplication.dto.TransactionFilterRequest;
 import com.example.financialapiapplication.model.FinancialTransaction;
-import com.example.financialapiapplication.repository.IFinancialTransactionRepository;
+import com.example.financialapiapplication.repository.FinancialTransactionRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,7 +14,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
 
 import java.math.BigDecimal;
@@ -35,7 +33,7 @@ import static org.mockito.Mockito.when;
 class FinancialTransactionServiceTest {
     
     @Mock
-    private IFinancialTransactionRepository repository;
+    private FinancialTransactionRepository repository;
     
     @Mock
     private PaymentService paymentService;
